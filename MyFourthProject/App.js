@@ -1,108 +1,33 @@
 import  React  from 'react';
-import { Text, Image, ScrollView } from 'react-native';
+import { Text, View, SectionList } from 'react-native';
 
-const dog = {
-  uri: 'https://cdn.pixabay.com/photo/2016/10/10/14/13/dog-1728494_960_720.png',
-  width: 64,
-  height: 64,
-}
 
-export default  MyScrollViewApp = () => {
 
-  return (
-   <ScrollView style={{padding: 40}}>
-    <Text style={{fontSize: 80}}>
-      try to scroll doown
-    </Text>
-    <Image source={require('./assets/dog.webp')} style = {{width: 64,
-  height: 64,}}/>
-    <Image source={dog}/>
-    <Image source={dog}/>
-    <Image source={dog}/>
-    <Image source={dog}/>
-    <Image source={dog}/>
-    <Image source={dog}/>
-    <Text style={{fontSize: 80}}>
-      try to scroll down again, if you like
-    </Text>
-    <Image source={dog}/>
-    <Image source={dog}/>
-    <Image source={dog}/>
-    <Image source={dog}/>
-    <Image source={dog}/>
-    <Image source={dog}/>
-    <Image source={dog}/>
-    <Text style={{fontSize: 80}}>
-      try to scroll down again, if you like
-    </Text>
-    <Image source={dog}/>
-    <Image source={dog}/>
-    <Image source={dog}/>
-    <Image source={dog}/>
-    <Image source={dog}/>
-    <Image source={dog}/>
-    <Image source={dog}/>
-    <Text style={{fontSize: 80}}>
-      try to scroll down again, if you like
-    </Text>
-    <Image source={dog}/>
-    <Image source={dog}/>
-    <Image source={dog}/>
-    <Image source={dog}/>
-    <Image source={dog}/>
-    <Image source={dog}/>
-    <Image source={dog}/>
-    <Text style={{fontSize: 80}}>
-      try to scroll down again, if you like
-    </Text>
-    <Image source={dog}/>
-    <Image source={dog}/>
-    <Image source={dog}/>
-    <Image source={dog}/>
-    <Image source={dog}/>
-    <Image source={dog}/>
-    <Image source={dog}/>
-    <Text style={{fontSize: 80}}>
-      try to scroll down again, if you like
-    </Text>
-    <Image source={dog}/>
-    <Image source={dog}/>
-    <Image source={dog}/>
-    <Image source={dog}/>
-    <Image source={dog}/>
-    <Image source={dog}/>
-    <Image source={dog}/>
-    <Text style={{fontSize: 80}}>
-      try to scroll down again, if you like
-    </Text>
-    <Image source={dog}/>
-    <Image source={dog}/>
-    <Image source={dog}/>
-    <Image source={dog}/>
-    <Image source={dog}/>
-    <Image source={dog}/>
-    <Image source={dog}/>
-    <Text style={{fontSize: 80}}>
-      try to scroll down again, if you like
-    </Text>
-    <Image source={dog}/>
-    <Image source={dog}/>
-    <Image source={dog}/>
-    <Image source={dog}/>
-    <Image source={dog}/>
-    <Image source={dog}/>
-    <Image source={dog}/>
-    <Text style={{fontSize: 80}}>
-      try to scroll down again, if you like
-    </Text>
-    <Image source={dog}/>
-    <Image source={dog}/>
-    <Image source={dog}/>
-    <Image source={dog}/>
-    <Image source={dog}/>
-    <Image source={dog}/>
-    <Image source={dog}/>
-   </ScrollView>
-  );
+export default  StatesApp = () => {
+return(
+<View style={{flex: 1, paddingTop: 22}}>
+  <SectionList
+  sections={[{title: 'A', data: ['Alabama', 'Alaska', 'Arizona','Arkansas']},
+  {title: 'C', data: ['California', 'Colorado', 'Connecticut']},
+  {title: 'F', data: ['Florida']},
+
+
+
+  ]}
+
+  
+  renderItem={({item}) => <Text style={{padding: 10, fontSize:20, height: 44}}> {item} </Text>}
+  renderSectionHeader={({section}) => <Text style={{paddingTop: 4, paddingLeft:10, 
+  paddingright: 10, paddingBottom: 4, fontSize: 16, fontWeight: 'bold', backgroundColor: '9FA8DA',}}>{section.title}</Text>}
+  keyExtractor={(item,index) =>index}
+  
+
+  
+  />
+</View>
+);
+  
+   
 
 }
+
